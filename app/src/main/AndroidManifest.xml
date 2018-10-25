@@ -2,6 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="net.leocadio.joao.sistemadeferramentas">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Para preencher automaticamente o campo de texto de email no formulário de login com os emails do usuários -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
