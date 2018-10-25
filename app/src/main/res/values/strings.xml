@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Sistema de Ferramentas</string>
+    <string name="action_settings">Settings</string>
+    <!-- login layout -->
+    <string name="login">Login</string>
+    <string name="email">E-mail</string>
+    <string name="senha">Senha</string>
+    <string name="sign_up">Não possui conta? Registrar-se</string>
+    <!-- signup layout -->
+    <string name="criar_conta">Criar Conta</string>
+    <string name="signup_subtitulo">Depois de clicar no botão Registrar. Você será redirecionado para a tela de login</string>
+    <string name="registrar">Registrar</string>
+</resources>

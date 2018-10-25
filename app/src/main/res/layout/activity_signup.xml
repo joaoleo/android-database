@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/auth"
+    tools:context=".activities.SignUp">
+
+    <View
+        android:id="@+id/filtro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:alpha="0.6"
+        android:background="#000000" />
+
+    <TextView
+        android:id="@+id/_titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="63dp"
+        android:gravity="center_horizontal"
+        android:text="@string/criar_conta"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffffff"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/_subtitutlo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/_titulo"
+        android:layout_alignStart="@+id/txtEmail"
+        android:layout_alignEnd="@+id/txtEmail"
+        android:gravity="center_horizontal"
+        android:text="@string/signup_subtitulo"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#ffffff" />
+
+    <EditText
+        android:id="@+id/txtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginRight="20dp"
+        android:drawableStart="@drawable/ic_email"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="@string/email"
+        android:inputType="textAutoComplete|textEmailAddress"
+        android:singleLine="true"
+        android:textColor="#ffffff"
+        android:textColorHint="#cccccc"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/txtSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtEmail"
+        android:layout_alignStart="@+id/txtEmail"
+        android:layout_alignEnd="@+id/txtEmail"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="-1dp"
+        android:drawableStart="@drawable/ic_vpn_key"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="@string/senha"
+        android:inputType="textPassword"
+        android:singleLine="true"
+        android:textColor="#ffffff"
+        android:textColorHint="#cccccc"
+        android:autofillHints="" />
+
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtSenha"
+        android:layout_alignStart="@+id/txtSenha"
+        android:layout_alignEnd="@+id/txtSenha"
+        android:layout_marginStart="-1dp"
+        android:layout_marginTop="69dp"
+        android:layout_marginEnd="1dp"
+        android:background="@drawable/btn_green"
+        android:text="@string/registrar"
+        android:textColor="#ffffff"
+        android:textSize="20sp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="71dp"
+        android:visibility="gone"/>
+
+</RelativeLayout>
