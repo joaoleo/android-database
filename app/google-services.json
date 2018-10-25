@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "1069626390830",
+    "firebase_url": "https://android-database-6f8a5.firebaseio.com",
+    "project_id": "android-database-6f8a5",
+    "storage_bucket": "android-database-6f8a5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1069626390830:android:938deaaffec38354",
+        "android_client_info": {
+          "package_name": "net.leocadio.joao.sistemadeferramentas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1069626390830-l8f8tnff67138psqksuvtc9thuf7rvnj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "net.leocadio.joao.sistemadeferramentas",
+            "certificate_hash": "3e26f5a4f6a43195f5d24b6a1e6205f0ee90bd27"
+          }
+        },
+        {
+          "client_id": "1069626390830-madu47u1s0v9k3d9qjbv3mujepin2hds.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "net.leocadio.joao.sistemadeferramentas",
+            "certificate_hash": "cd86a151af0285e79fd524e6db9504ca3529edfe"
+          }
+        },
+        {
+          "client_id": "1069626390830-pjknr5pe3garau6h6gi7jfjpfn5ike66.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWmPOuCnKlpYtcViGDRJNvlZWtomC8w70"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1069626390830-pjknr5pe3garau6h6gi7jfjpfn5ike66.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
