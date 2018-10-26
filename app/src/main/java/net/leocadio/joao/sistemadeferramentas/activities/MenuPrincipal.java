@@ -1,14 +1,25 @@
 package net.leocadio.joao.sistemadeferramentas.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.GridLayout;
+import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 import net.leocadio.joao.sistemadeferramentas.R;
+import net.leocadio.joao.sistemadeferramentas.dao.ConfigFirebase;
 
 public class MenuPrincipal extends AppCompatActivity {
+
+    private FirebaseAuth usuarioFirebase;
+    GridLayout mainGrid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +28,36 @@ public class MenuPrincipal extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        mainGrid = (GridLayout) findViewById(R.id.mainGrid);
+        setSingleEvent(mainGrid);
 
+        usuarioFirebase = ConfigFirebase.getFirebaseAutenticacao();
+
+    }
+
+    // definindo onClickListener para cada elemento
+    private void setSingleEvent(GridLayout gridLayout) {
+        for (int i = 0; i < gridLayout.getChildCount(); i++) {
+            CardView cardView = (CardView) gridLayout.getChildAt(i);
+            final int finalI = i;
+            cardView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    toast("Clicked at index " + finalI);
+                    switch (finalI) {
+                        case 0:
+                            startActivity(new Intent(getApplicationContext(), CreateFerramenta.class));
+                            break;
+                        case 1:
+                        case 2:
+                        case 3:
+                        default:
+                            break;
+
+                    }
+                }
+            });
+        }
     }
 
     @Override
@@ -35,10 +75,18 @@ public class MenuPrincipal extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.sobre) {
             return true;
+        } else if (id == R.id.sair) {
+            usuarioFirebase.signOut();
+            startActivity(new Intent(getApplicationContext(), Login.class));
+            finish();
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void toast(String msg) {
+        Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
     }
 }
