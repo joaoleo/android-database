@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DatabaseReference;
 
 import net.leocadio.joao.sistemadeferramentas.R;
@@ -25,6 +26,8 @@ public class CreateFerramenta extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ferramenta_create);
+
+        FirebaseApp.initializeApp(this);
 
         //formulario
         ferramenta = (EditText) findViewById(R.id.ferramenta);

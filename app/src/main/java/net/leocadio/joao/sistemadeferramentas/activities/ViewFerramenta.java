@@ -3,6 +3,8 @@ package net.leocadio.joao.sistemadeferramentas.activities;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.google.firebase.FirebaseApp;
+
 import net.leocadio.joao.sistemadeferramentas.R;
 
 public class ViewFerramenta extends AppCompatActivity {
@@ -11,5 +13,7 @@ public class ViewFerramenta extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ferramenta_view);
+
+        FirebaseApp.initializeApp(this);
     }
 }
