@@ -42,6 +42,7 @@ public class CreateFerramenta extends AppCompatActivity {
         btnCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //instancia a classe
                 tool = new Ferramenta();
                 tool.setFerramenta(ferramenta.getText().toString());
                 tool.setFabricante(fabricante.getText().toString());
