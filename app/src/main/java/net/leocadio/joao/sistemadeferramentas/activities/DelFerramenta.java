@@ -94,12 +94,12 @@ public class DelFerramenta extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
                         firebase = ConfigFirebase.getFirebase().child("ferramentas");
                         firebase.child(toolDelete.getFerramenta().toString()).removeValue();
-                        toast("Exclusão efetuada!");
+                        toast("Exclusão efetuada com sucesso!");
                     }
                 });
 
                 //define botao nao
-                builder.setPositiveButton("Não", new DialogInterface.OnClickListener() {
+                builder.setNegativeButton("Não", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         toast("Exclusão cancelada!");

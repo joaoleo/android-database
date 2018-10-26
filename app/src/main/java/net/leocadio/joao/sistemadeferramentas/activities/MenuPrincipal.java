@@ -46,7 +46,6 @@ public class MenuPrincipal extends AppCompatActivity {
             cardView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    toast("Clicked at index " + finalI);
                     switch (finalI) {
                         case 0:
                             startActivity(new Intent(getApplicationContext(), CreateFerramenta.class));
