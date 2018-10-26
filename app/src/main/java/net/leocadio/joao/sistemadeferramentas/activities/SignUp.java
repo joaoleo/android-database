@@ -28,7 +28,7 @@ public class SignUp extends AppCompatActivity {
     private static final String TAG = "EmailSenha";
 
     private EditText txtEmail, txtSenha;
-    private Button btnSignUp;
+    private Button btnRegistrar;
     private ProgressBar progressBar;
     private Usuario usuario;
     private FirebaseAuth autenticacao;
@@ -42,10 +42,10 @@ public class SignUp extends AppCompatActivity {
 
         txtEmail = findViewById(R.id.txtEmail);
         txtSenha = findViewById(R.id.txtSenha);
-        btnSignUp = findViewById(R.id.btnSignUp);
+        btnRegistrar = findViewById(R.id.btnRegistrar);
         progressBar = findViewById(R.id.progressBar);
 
-        btnSignUp.setOnClickListener(new View.OnClickListener() {
+        btnRegistrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String email = txtEmail.getText().toString().trim();

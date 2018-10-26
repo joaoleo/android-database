@@ -94,7 +94,7 @@
         android:textSize="20sp" />
 
     <TextView
-        android:id="@+id/btnSignUp"
+        android:id="@+id/signUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnLogin"

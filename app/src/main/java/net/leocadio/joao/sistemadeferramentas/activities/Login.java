@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -26,7 +27,8 @@ public class Login extends AppCompatActivity {
     private static final String TAG = "EmailSenha";
 
     private EditText txtEmail, txtSenha;
-    private Button btnLogin, btnSignUp;
+    private Button btnLogin;
+    private TextView signUp;
     private ProgressBar progressBar;
     private FirebaseAuth autenticacao;
 
@@ -38,13 +40,13 @@ public class Login extends AppCompatActivity {
         FirebaseApp.initializeApp(this);
 
         btnLogin = findViewById(R.id.btnLogin);
-        btnSignUp = findViewById(R.id.btnSignUp);
+        signUp = findViewById(R.id.signUp);
         txtEmail = findViewById(R.id.txtEmail);
         txtSenha = findViewById(R.id.txtSenha);
         progressBar = findViewById(R.id.progressBar);
 
         //tela de registro
-        btnSignUp.setOnClickListener(new View.OnClickListener() {
+        signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), SignUp.class));
