@@ -101,7 +101,7 @@ public class MenuPrincipal extends AppCompatActivity {
         //define o titulo
         builder.setTitle("Sobre");
         //mensagem
-        builder.setMessage("@string/about");
+        builder.setMessage(R.string.about);
         //cria o alerta
         alerta = builder.create();
         //exibe o alerta

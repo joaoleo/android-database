@@ -19,7 +19,7 @@
         <activity
             android:name=".activities.MenuPrincipal"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activities.Login"
             android:theme="@style/Theme.AppCompat.NoActionBar">
@@ -34,7 +34,8 @@
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity android:name=".activities.CreateFerramenta" />
         <activity android:name=".activities.ViewFerramenta" />
-        <activity android:name=".activities.DelFerramenta"></activity>
+        <activity android:name=".activities.DelFerramenta" />
+        <activity android:name=".activities.EditFerramenta"></activity>
     </application>
 
 </manifest>
