@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/main"
-    tools:context=".activities.CreateFerramenta">
+    tools:context=".activities.EditarFerramenta">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -29,7 +29,7 @@
                 android:layout_width="354dp"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="@string/cadastro"
+                android:text="@string/atualiza"
                 android:textAlignment="center"
                 android:textColor="@color/design_default_color_primary_dark"
                 android:textSize="30sp"
@@ -74,7 +74,6 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="71dp"
                 android:ems="10"
-                android:hint="Furadeira"
                 android:inputType="text|textAutoCorrect|textAutoComplete"
                 android:autofillHints="" />
 
@@ -99,7 +98,6 @@
                 android:layout_marginTop="143dp"
                 android:autofillHints=""
                 android:ems="10"
-                android:hint="Booch"
                 android:inputType="text|textAutoCorrect|textAutoComplete" />
 
             <TextView
@@ -123,7 +121,6 @@
                 android:layout_marginTop="223dp"
                 android:autofillHints=""
                 android:ems="10"
-                android:hint="@string/cifrao"
                 android:inputType="number|numberSigned|numberDecimal" />
 
             <TextView
@@ -146,7 +143,6 @@
                 android:layout_marginTop="223dp"
                 android:autofillHints=""
                 android:ems="10"
-                android:hint="Vermelho"
                 android:inputType="text|textAutoCorrect|textAutoComplete" />
 
             <TextView
@@ -169,7 +165,6 @@
                 android:layout_marginTop="304dp"
                 android:autofillHints=""
                 android:ems="10"
-                android:hint="CODE357159"
                 android:inputType="text|textAutoCorrect|textAutoComplete" />
 
             <Button
@@ -185,14 +180,14 @@
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/btnCadastrar"
+                android:id="@+id/btnAtualizar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@+id/btnCancelar"
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="73dp"
                 android:background="@drawable/btn_green"
-                android:text="@string/cadastrar"
+                android:text="@string/atualizar"
                 android:textAllCaps="false" />
 
         </RelativeLayout>

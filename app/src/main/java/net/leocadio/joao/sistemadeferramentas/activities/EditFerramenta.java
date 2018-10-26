@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -32,13 +33,14 @@ public class EditFerramenta extends AppCompatActivity {
     private ArrayList<Ferramenta> ferramentas;
     private DatabaseReference firebase;
     private ValueEventListener valueEventListenerFerramentas;
-    private AlertDialog alerta;
     private Ferramenta toolEdit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ferramenta_edit);
+
+        FirebaseApp.initializeApp(this);
 
         btnVoltar = (Button) findViewById(R.id.btnVoltar);
         ferramentas = new ArrayList<Ferramenta>();
@@ -76,7 +78,17 @@ public class EditFerramenta extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                toast("clicado em: " + position);
+
+                toolEdit = adapter.getItem(position);
+
+                Intent intent = new Intent(getApplicationContext(), EditarFerramenta.class);
+                intent.putExtra("ferramenta", toolEdit.getFerramenta());
+                intent.putExtra("fabricante", toolEdit.getFabricante());
+                intent.putExtra("preco", toolEdit.getPreco());
+                intent.putExtra("cor", toolEdit.getCor());
+                intent.putExtra("referencia", toolEdit.getReferencia());
+
+                startActivity(intent);
             }
         });
     }

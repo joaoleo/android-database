@@ -38,4 +38,6 @@
     <string name="sair">Sair</string>
     <string name="about">Trabalho em Android Studio solicitado pelo professor Edson Protti.\nCurso de Dispositivos Móveis.\nCRUD em banco de dados utilizando Firebase de um sistema de gerenciamento de ferramentas.</string>
     <string name="editar_dados">[Editar Dados]</string>
+    <string name="atualizar">Atualizar</string>
+    <string name="atualiza">[Atualizar]</string>
 </resources>

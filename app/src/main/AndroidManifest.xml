@@ -35,7 +35,8 @@
         <activity android:name=".activities.CreateFerramenta" />
         <activity android:name=".activities.ViewFerramenta" />
         <activity android:name=".activities.DelFerramenta" />
-        <activity android:name=".activities.EditFerramenta"></activity>
+        <activity android:name=".activities.EditFerramenta" />
+        <activity android:name=".activities.EditarFerramenta"></activity>
     </application>
 
 </manifest>
