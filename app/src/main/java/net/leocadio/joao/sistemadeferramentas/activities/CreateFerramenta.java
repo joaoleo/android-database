@@ -65,7 +65,7 @@ public class CreateFerramenta extends AppCompatActivity {
     private boolean salvarDB(Ferramenta ferramenta)
     {
         try {
-            firebase = ConfigFirebase.getFirebase().child("ferrametas");
+            firebase = ConfigFirebase.getFirebase().child("ferramentas");
             firebase.child(tool.getFerramenta()).setValue(ferramenta);
             toast("Ferrameta inserida com sucesso!");
             return true;

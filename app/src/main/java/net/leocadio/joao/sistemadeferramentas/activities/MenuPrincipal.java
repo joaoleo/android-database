@@ -54,6 +54,8 @@ public class MenuPrincipal extends AppCompatActivity {
                         case 1:
                         case 2:
                         case 3:
+                            startActivity(new Intent(getApplicationContext(), DelFerramenta.class));
+                            break;
                         default:
                             break;
 
