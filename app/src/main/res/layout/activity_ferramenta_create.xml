@@ -30,7 +30,7 @@
                 android:layout_width="354dp"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="[Cadastro]"
+                android:text="@string/cadastro"
                 android:textAlignment="center"
                 android:textColor="@color/design_default_color_primary_dark"
                 android:textSize="30sp"
@@ -52,7 +52,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="5dp"
-                android:text="Digite as informações abaixo:"
+                android:text="@string/digite"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -64,7 +64,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="51dp"
-                android:text="Nome da Ferramenta:" />
+                android:text="@string/ferramenta" />
 
             <EditText
                 android:id="@+id/ferramenta"
@@ -75,7 +75,9 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="71dp"
                 android:ems="10"
-                android:inputType="text|textAutoCorrect|textAutoComplete" />
+                android:hint="Furadeira"
+                android:inputType="text|textAutoCorrect|textAutoComplete"
+                android:autofillHints="" />
 
             <TextView
                 android:id="@+id/_fabricante"
@@ -85,7 +87,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="123dp"
-                android:text="Fabricante:" />
+                android:text="@string/fabricante" />
 
 
             <EditText
@@ -96,7 +98,9 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="143dp"
+                android:autofillHints=""
                 android:ems="10"
+                android:hint="Booch"
                 android:inputType="text|textAutoCorrect|textAutoComplete" />
 
             <TextView
@@ -107,7 +111,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="203dp"
-                android:text="Preço:" />
+                android:text="@string/preco" />
 
 
             <EditText
@@ -118,8 +122,9 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="223dp"
+                android:autofillHints=""
                 android:ems="10"
-                android:hint="R$"
+                android:hint="@string/cifrao"
                 android:inputType="number|numberSigned|numberDecimal" />
 
             <TextView
@@ -130,7 +135,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="211dp"
                 android:layout_marginTop="203dp"
-                android:text="Cor:" />
+                android:text="@string/cor" />
 
             <EditText
                 android:id="@+id/cor"
@@ -140,7 +145,9 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="210dp"
                 android:layout_marginTop="223dp"
+                android:autofillHints=""
                 android:ems="10"
+                android:hint="Vermelho"
                 android:inputType="text|textAutoCorrect|textAutoComplete" />
 
             <TextView
@@ -151,7 +158,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="284dp"
-                android:text="Referência:" />
+                android:text="@string/referencia" />
 
             <EditText
                 android:id="@+id/referencia"
@@ -161,7 +168,9 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="304dp"
+                android:autofillHints=""
                 android:ems="10"
+                android:hint="CODE357159"
                 android:inputType="text|textAutoCorrect|textAutoComplete" />
 
             <Button
@@ -173,7 +182,7 @@
                 android:layout_marginStart="73dp"
                 android:layout_marginBottom="6dp"
                 android:background="@drawable/btn_white"
-                android:text="Cancelar"
+                android:text="@string/voltar"
                 android:textAllCaps="false" />
 
             <Button
@@ -184,7 +193,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="73dp"
                 android:background="@drawable/btn_green"
-                android:text="Cadastrar"
+                android:text="@string/cadastrar"
                 android:textAllCaps="false" />
 
         </RelativeLayout>

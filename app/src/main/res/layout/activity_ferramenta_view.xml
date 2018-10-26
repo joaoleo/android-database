@@ -30,7 +30,7 @@
                 android:layout_width="354dp"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="[Consultar Dados]"
+                android:text="@string/consultar_dados"
                 android:textAlignment="center"
                 android:textColor="@color/design_default_color_primary_dark"
                 android:textSize="30sp"
@@ -51,7 +51,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="5dp"
-                android:text="Visualize as informações abaixo:"
+                android:text="@string/visualize"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -63,7 +63,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="51dp"
-                android:text="Ferramenta:" />
+                android:text="@string/ferramenta" />
 
             <TextView
                 android:id="@+id/ferramenta"
@@ -84,7 +84,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="123dp"
-                android:text="Fabricante:" />
+                android:text="@string/fabricante" />
 
 
             <TextView
@@ -106,7 +106,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="203dp"
-                android:text="Preço:" />
+                android:text="@string/preco" />
 
 
             <TextView
@@ -128,7 +128,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="211dp"
                 android:layout_marginTop="203dp"
-                android:text="Cor:" />
+                android:text="@string/cor" />
 
             <TextView
                 android:id="@+id/cor"
@@ -149,7 +149,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="284dp"
-                android:text="Referência:" />
+                android:text="@string/referencia" />
 
             <TextView
                 android:id="@+id/referencia"
@@ -171,7 +171,7 @@
                 android:layout_marginStart="120dp"
                 android:layout_marginBottom="15dp"
                 android:background="@drawable/btn_white"
-                android:text="Fechar Consulta"
+                android:text="@string/fechar_consulta"
                 android:textAllCaps="false" />
 
         </RelativeLayout>

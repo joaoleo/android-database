@@ -2,6 +2,7 @@ package net.leocadio.joao.sistemadeferramentas.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
@@ -19,6 +20,7 @@ import net.leocadio.joao.sistemadeferramentas.dao.ConfigFirebase;
 
 public class MenuPrincipal extends AppCompatActivity {
 
+    private AlertDialog alerta;
     private FirebaseAuth usuarioFirebase;
     GridLayout mainGrid;
 
@@ -80,7 +82,7 @@ public class MenuPrincipal extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.sobre) {
-            return true;
+            exibeSobre();
         } else if (id == R.id.sair) {
             usuarioFirebase.signOut();
             startActivity(new Intent(getApplicationContext(), Login.class));
@@ -92,5 +94,17 @@ public class MenuPrincipal extends AppCompatActivity {
 
     public void toast(String msg) {
         Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
+    }
+
+    public void exibeSobre() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(MenuPrincipal.this);
+        //define o titulo
+        builder.setTitle("Sobre");
+        //mensagem
+        builder.setMessage("@string/about");
+        //cria o alerta
+        alerta = builder.create();
+        //exibe o alerta
+        alerta.show();
     }
 }

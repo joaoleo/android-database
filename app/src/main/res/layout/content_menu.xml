@@ -28,7 +28,7 @@
                 android:id="@+id/_titulo"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Sistema Gerenciador\nde Ferramentas"
+                android:text="@string/menu_titulo"
                 android:textAlignment="center"
                 android:textColor="@color/design_default_color_primary_dark"
                 android:textSize="30sp"
@@ -71,12 +71,13 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/create" />
+                        android:src="@drawable/create"
+                        android:contentDescription="@string/cadastrar_ferramenta" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Cadastrar Ferramenta"
+                        android:text="@string/cadastrar_ferramenta"
                         android:textAlignment="center"
                         android:textColor="@android:color/black"
                         android:textSize="18sp"
@@ -109,12 +110,13 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/edit" />
+                        android:src="@drawable/edit"
+                        android:contentDescription="@string/alterar_dados" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Alterar Dados"
+                        android:text="@string/alterar_dados"
                         android:textAlignment="center"
                         android:textColor="@android:color/black"
                         android:textSize="18sp"
@@ -149,12 +151,13 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/search" />
+                        android:src="@drawable/search"
+                        android:contentDescription="@string/consultar_ferramenta" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Consultar Ferramenta"
+                        android:text="@string/consultar_ferramenta"
                         android:textAlignment="center"
                         android:textColor="@android:color/black"
                         android:textSize="18sp"
@@ -187,12 +190,13 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/delete" />
+                        android:src="@drawable/delete"
+                        android:contentDescription="@string/excluir_ferramenta" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Excluir Ferramenta"
+                        android:text="@string/excluir_ferramenta"
                         android:textAlignment="center"
                         android:textColor="@android:color/black"
                         android:textSize="18sp"

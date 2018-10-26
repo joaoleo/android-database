@@ -10,4 +10,31 @@
     <string name="criar_conta">Criar Conta</string>
     <string name="signup_subtitulo">Depois de clicar no botão Registrar. Você será redirecionado para a tela de login</string>
     <string name="registrar">Registrar</string>
+    <!--menu layout-->
+    <string name="menu_titulo">Sistema Gerenciador de Ferramentas</string>
+    <string name="cadastrar_ferramenta">Cadastrar Ferramenta</string>
+    <string name="alterar_dados">Alterar Dados</string>
+    <string name="consultar_ferramenta">Consultar Ferramenta</string>
+    <string name="excluir_ferramenta">Excluir Ferramenta</string>
+    <!--view ferramenta-->
+    <string name="consultar_dados">[Consultar Dados]</string>
+    <string name="visualize">Visualize as informações abaixo:</string>
+    <string name="ferramenta">Ferramenta</string>
+    <string name="fabricante">Fabricante</string>
+    <string name="preco">Preço</string>
+    <string name="cor">Cor</string>
+    <string name="referencia">Referência</string>
+    <string name="fechar_consulta">Fechar Consulta</string>
+    <!--delete ferramenta-->
+    <string name="alterar_dado">[Alterar Dados]</string>
+    <string name="voltar">Voltar</string>
+    <!--add ferramenta-->
+    <string name="cadastro">[Cadastro]</string>
+    <string name="digite">Digite as informações abaixo:</string>
+    <string name="cifrao">R$ 200.00</string>
+    <string name="cadastrar">Cadastrar</string>
+    <!--menu menu-->
+    <string name="sobre">Sobre</string>
+    <string name="sair">Sair</string>
+    <string name="about">Trabalho em Android Studio solicitado pelo professor Edson Protti.\nCurso de Dispositivos Móveis.\nCRUD em banco de dados utilizando Firebase de um sistema de gerenciamento de ferramentas.</string>
 </resources>
