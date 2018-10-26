@@ -51,8 +51,6 @@ public class EditarFerramenta extends AppCompatActivity {
             referencia.setText(String.valueOf(bundle.get("referencia")));
         }
 
-        final String id = String.valueOf(ferramenta);
-
         btnCancelar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -64,24 +62,24 @@ public class EditarFerramenta extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Ferramenta tool = new Ferramenta();
+                tool.setKey(ferramenta.getText().toString());
                 tool.setFerramenta(ferramenta.getText().toString());
                 tool.setFabricante(fabricante.getText().toString());
                 tool.setPreco(preco.getText().toString());
                 tool.setCor(cor.getText().toString());
                 tool.setReferencia(referencia.getText().toString());
                 //salva no banco
-                toast(id);
-//                atualizarDB(tool, id);
+                atualizarDB(tool);
             }
         });
     }
 
-    public boolean atualizarDB(Ferramenta ferramenta, String id)
+    public boolean atualizarDB(Ferramenta ferramenta)
     {
         try {
             firebase = ConfigFirebase.getFirebase().child("ferramentas");
-            firebase.child(id).setValue(ferramenta);
-            toast("Ferrameta atualizada com sucesso!" + id);
+            firebase.child(ferramenta.getKey()).setValue(ferramenta);
+            toast("Ferrameta atualizada com sucesso!");
             return true;
         } catch (Exception ex) {
             ex.printStackTrace();

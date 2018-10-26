@@ -5,6 +5,7 @@ import com.google.firebase.database.IgnoreExtraProperties;
 @IgnoreExtraProperties
 public class Ferramenta {
 
+    private String key;
     private String ferramenta;
     private String fabricante;
     private String preco;
@@ -12,6 +13,14 @@ public class Ferramenta {
     private String referencia;
 
     public Ferramenta() {}
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
+    }
 
     public String getFerramenta() {
         return ferramenta;

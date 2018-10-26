@@ -57,6 +57,7 @@ public class EditFerramenta extends AppCompatActivity {
 
                 for (DataSnapshot dados : dataSnapshot.getChildren()) {
                     Ferramenta ferramentaNovo = dados.getValue(Ferramenta.class);
+                    ferramentaNovo.setKey(dados.getKey());
                     ferramentas.add(ferramentaNovo);
                 }
                 adapter.notifyDataSetChanged();
