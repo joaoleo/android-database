@@ -92,7 +92,7 @@ public class DelFerramenta extends AppCompatActivity {
                 builder.setMessage("Você deseja excluir: " + toolDelete.getFerramenta() + " ?");
 
                 //define botao sim
-                builder.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
+                builder.setPositiveButton("Excluir", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         firebase = ConfigFirebase.getFirebase().child("ferramentas");
@@ -102,7 +102,7 @@ public class DelFerramenta extends AppCompatActivity {
                 });
 
                 //define botao nao
-                builder.setNegativeButton("Não", new DialogInterface.OnClickListener() {
+                builder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         toast("Exclusão cancelada!");
