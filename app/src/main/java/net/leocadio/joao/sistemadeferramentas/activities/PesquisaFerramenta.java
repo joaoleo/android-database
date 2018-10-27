@@ -10,7 +10,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DataSnapshot;
@@ -25,7 +24,7 @@ import net.leocadio.joao.sistemadeferramentas.models.Ferramenta;
 
 import java.util.ArrayList;
 
-public class EditFerramenta extends AppCompatActivity {
+public class PesquisaFerramenta extends AppCompatActivity {
 
     private Button btnVoltar;
     private ListView listView;
@@ -33,12 +32,13 @@ public class EditFerramenta extends AppCompatActivity {
     private ArrayList<Ferramenta> ferramentas;
     private DatabaseReference firebase;
     private ValueEventListener valueEventListenerFerramentas;
-    private Ferramenta toolEdit;
+    private AlertDialog alerta;
+    private Ferramenta toolView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ferramenta_edit);
+        setContentView(R.layout.activity_ferramenta_pesquisa);
 
         FirebaseApp.initializeApp(this);
 
@@ -78,22 +78,18 @@ public class EditFerramenta extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                toolView = adapter.getItem(position);
 
-                toolEdit = adapter.getItem(position);
-                Intent intent = new Intent(getApplicationContext(), EditarFerramenta.class);
-                intent.putExtra("ferramenta", toolEdit.getFerramenta());
-                intent.putExtra("fabricante", toolEdit.getFabricante());
-                intent.putExtra("preco", toolEdit.getPreco());
-                intent.putExtra("cor", toolEdit.getCor());
-                intent.putExtra("referencia", toolEdit.getReferencia());
+                Intent intent = new Intent(getApplicationContext(), ViewFerramenta.class);
+                intent.putExtra("ferramenta", toolView.getFerramenta());
+                intent.putExtra("fabricante", toolView.getFabricante());
+                intent.putExtra("preco", toolView.getPreco());
+                intent.putExtra("cor", toolView.getCor());
+                intent.putExtra("referencia", toolView.getReferencia());
 
                 startActivity(intent);
             }
         });
-    }
-
-    public void toast(String msg) {
-        Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
     }
 
     @Override

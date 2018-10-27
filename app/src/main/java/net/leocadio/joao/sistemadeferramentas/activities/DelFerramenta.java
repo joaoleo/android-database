@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -40,6 +41,8 @@ public class DelFerramenta extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ferramenta_del);
+
+        FirebaseApp.initializeApp(this);
 
         btnVoltar = (Button) findViewById(R.id.btnVoltar);
         ferramentas = new ArrayList<Ferramenta>();
@@ -86,14 +89,14 @@ public class DelFerramenta extends AppCompatActivity {
                 builder.setTitle("Confirma Exclusão?");
 
                 //define uma mensagem
-                builder.setMessage("Você deseja excluir: " + toolDelete.getFerramenta().toString() + " ?");
+                builder.setMessage("Você deseja excluir: " + toolDelete.getFerramenta() + " ?");
 
                 //define botao sim
                 builder.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         firebase = ConfigFirebase.getFirebase().child("ferramentas");
-                        firebase.child(toolDelete.getFerramenta().toString()).removeValue();
+                        firebase.child(toolDelete.getKey()).removeValue();
                         toast("Exclusão efetuada com sucesso!");
                     }
                 });

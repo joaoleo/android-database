@@ -56,6 +56,8 @@ public class MenuPrincipal extends AppCompatActivity {
                             startActivity(new Intent(getApplicationContext(), EditFerramenta.class));
                             break;
                         case 2:
+                            startActivity(new Intent(getApplicationContext(), PesquisaFerramenta.class));
+                            break;
                         case 3:
                             startActivity(new Intent(getApplicationContext(), DelFerramenta.class));
                             break;

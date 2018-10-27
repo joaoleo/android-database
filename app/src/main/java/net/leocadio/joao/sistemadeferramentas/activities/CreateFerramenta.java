@@ -42,8 +42,10 @@ public class CreateFerramenta extends AppCompatActivity {
         btnCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String id = ConfigFirebase.getFirebase().child("ferramentas").push().getKey();
                 //instancia a classe
                 tool = new Ferramenta();
+                tool.setKey(id);
                 tool.setFerramenta(ferramenta.getText().toString());
                 tool.setFabricante(fabricante.getText().toString());
                 tool.setPreco(preco.getText().toString());
@@ -66,7 +68,7 @@ public class CreateFerramenta extends AppCompatActivity {
     {
         try {
             firebase = ConfigFirebase.getFirebase().child("ferramentas");
-            firebase.child(tool.getFerramenta()).setValue(ferramenta);
+            firebase.child(tool.getKey()).setValue(ferramenta);
             toast("Ferrameta inserida com sucesso!");
             return true;
         } catch (Exception ex) {

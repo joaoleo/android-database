@@ -18,6 +18,7 @@ import net.leocadio.joao.sistemadeferramentas.models.Ferramenta;
 
 public class EditarFerramenta extends AppCompatActivity {
 
+    private TextView key;
     private EditText ferramenta, fabricante, preco, cor, referencia;
     private Button btnCancelar, btnAtualizar;
     private DatabaseReference firebase;
@@ -29,8 +30,11 @@ public class EditarFerramenta extends AppCompatActivity {
         setContentView(R.layout.activity_ferramenta_editar);
 
         FirebaseApp.initializeApp(this);
+        Intent intent = getIntent();
+        Bundle bundle = intent.getExtras();
 
         //formulario
+        key = (TextView) findViewById(R.id.key);
         ferramenta = (EditText) findViewById(R.id.ferramenta);
         fabricante = (EditText) findViewById(R.id.fabricante);
         preco = (EditText) findViewById(R.id.preco);
@@ -40,10 +44,8 @@ public class EditarFerramenta extends AppCompatActivity {
         btnCancelar = (Button) findViewById(R.id.btnCancelar);
         btnAtualizar = (Button) findViewById(R.id.btnAtualizar);
 
-        Intent intent = getIntent();
-        Bundle bundle = intent.getExtras();
-
         if (bundle != null) {
+            key.setText(String.valueOf(bundle.getString("key")));
             ferramenta.setText(String.valueOf(bundle.get("ferramenta")));
             fabricante.setText(String.valueOf(bundle.get("fabricante")));
             preco.setText(String.valueOf(bundle.get("preco")));
@@ -61,8 +63,9 @@ public class EditarFerramenta extends AppCompatActivity {
         btnAtualizar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Ferramenta tool = new Ferramenta();
-                tool.setKey(ferramenta.getText().toString());
+
+                tool = new Ferramenta();
+                tool.setKey(key.getText().toString());
                 tool.setFerramenta(ferramenta.getText().toString());
                 tool.setFabricante(fabricante.getText().toString());
                 tool.setPreco(preco.getText().toString());
@@ -78,8 +81,8 @@ public class EditarFerramenta extends AppCompatActivity {
     {
         try {
             firebase = ConfigFirebase.getFirebase().child("ferramentas");
-            firebase.child(ferramenta.getKey()).setValue(ferramenta);
-            toast("Ferrameta atualizada com sucesso!");
+            firebase.child(tool.getKey()).setValue(ferramenta);
+            toast("Ferrameta atualizada com sucesso!" + tool.getFerramenta());
             return true;
         } catch (Exception ex) {
             ex.printStackTrace();

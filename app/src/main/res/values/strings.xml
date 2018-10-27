@@ -40,4 +40,6 @@
     <string name="editar_dados">[Editar Dados]</string>
     <string name="atualizar">Atualizar</string>
     <string name="atualiza">[Atualizar]</string>
+    <string name="excluir_dados">[Excluir Dados]</string>
+    <string name="pesquisar">[Pesquisar]</string>
 </resources>
