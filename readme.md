@@ -1,4 +1,8 @@
-Android Database para versão 8.0 API 26
+## Android Database para versão 8.0 API 26
+
+Já existe um usuário com senha criado para teste:
+E-mail: me@me.com
+Senha: 123123
 
 ![pagina 01](https://raw.githubusercontent.com/joaorik/android-database/master/imagem/01.png)
 ![pagina 02](https://raw.githubusercontent.com/joaorik/android-database/master/imagem/02.png)
